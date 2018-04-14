@@ -1,9 +1,14 @@
+# MOF-Test 
+
+To allow api request you need to open the project with a server (mamp/lamp) or with `gulp run`
+
+
 # My template
 By Nicolas Bernaux
 
 ##   Installation
 
-To install this project on your computer,  follow these instructions : 
+To install this project :
 
 - Update gulp-cli `sudo npm i -g gulp-cli`
 
@@ -15,13 +20,11 @@ To install this project on your computer,  follow these instructions :
 
 `$ npm install`
 
-Then, you can run the project in your browser or build the project.
-
 ## Edit
 - Simple task `gulp`
 - Watch and server task `gulp run`
 
-##   GULP
+##  GULP
 
 #### Dependencies
 
