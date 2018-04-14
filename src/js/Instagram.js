@@ -37,9 +37,9 @@ export default class Instagram {
   }
 
   getRandomNumber(max) {
-    let tempRandom = Math.floor(Math.random() * max);
+    let tempRandom = Math.floor(Math.random() * 10);
     while (tempRandom === this.random) {
-      tempRandom = Math.floor(Math.random() * max);
+      tempRandom = Math.floor(Math.random() * 10);
     }
     return tempRandom;
   }
