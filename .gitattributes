@@ -13,3 +13,9 @@
 *.png binary
 *.jpg binary
 *.gif binary
+
+# Font fix
+*.ttf   -text diff
+ *.eot   -text diff
+ *.woff  -text diff
+ *.woff2 -text dif
