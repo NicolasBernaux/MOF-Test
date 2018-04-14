@@ -1,3 +1,42 @@
 body {
-  background: #bebebe;
+  background-size: 285px;
+  background: $bgColor url("../img/bg-image.png") no-repeat;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto 200px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include phone {
+    width: 90%;
+  }
+
+  @include tablet {
+    width: 626px
+  }
+
+  @include desktop {
+    width: 900px
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background: $grey-light;
+  margin: 110px 0;
+
+  &::after {
+    content: url("../img/separator-icon.svg");
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    padding: 0 2px;
+    background: $bgColor;
+    margin: -25px;
+  }
 }

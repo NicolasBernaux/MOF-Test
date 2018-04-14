@@ -1,0 +1,125 @@
+.card {
+  width: 626px;
+  text-align: center;
+  position: relative;
+  height: 715px;
+  margin-bottom: 30px;
+
+  &:nth-child(2n) {
+    margin-right: 14px;
+  }
+
+  @include phone {
+    width: 100%;
+    height: 615px;
+  }
+
+  @include desktop {
+    width: 440px;
+    height: 615px;
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.card__whiteBg {
+  background: $white;
+  height: 614px;
+  position: relative;
+  padding: 65px 142px;
+
+  @include phone {
+    padding: 30px 20px;
+    height: 510px;
+  }
+
+  @include desktop {
+    padding: 30px 60px;
+    height: 514px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 68px;
+    bottom: -32px;
+    border: 1px solid #C2D2C2;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+  }
+}
+
+.card__title {
+  font-size: 1.75rem;
+}
+
+.card__description {
+  margin: 10px 0 30px 0;
+  color: $grey-dark;
+}
+
+.card__button {
+  width: 215px;
+  height: 45px;
+  line-height: 45px;
+  border: 1px solid $grey-light;
+}
+
+
+/*
+ * Image
+*/
+.card__thumbnail {
+  width: 396px;
+  height: 375px;
+  box-shadow: 0 25px 45px 0 rgba(0,0,0,0.24);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  background: $white;
+  overflow: hidden;
+
+
+  @include phone {
+    width: 300px;
+    height: 280px;
+  }
+
+  @include desktop {
+    width: 290px;
+    height: 271px;
+  }
+
+  &:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: $grey-light;
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  &:after {
+    content: "";
+    width: 1px;
+    height: 25px;
+    background: $grey-light;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.card__img {
+  width: 100%;
+  position: relative;
+}
