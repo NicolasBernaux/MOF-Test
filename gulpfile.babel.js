@@ -178,11 +178,11 @@ gulp.task('server', () => {
  * JS
  */
 gulp.task('js', () => {
-  browserify({
+  return browserify({
     entries: config.js.app,
     debug: true,
   })
-    .transform(babelify, {presets: ['babel-preset-es2015'].map(require.resolve)})
+    .transform(babelify, {presets: ['babel-preset-env'].map(require.resolve)})
     .bundle()
     .on('error', onError)
     .pipe(source('app.js'))

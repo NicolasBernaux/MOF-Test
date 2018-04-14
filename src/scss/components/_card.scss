@@ -2,8 +2,8 @@
   width: 626px;
   text-align: center;
   position: relative;
-  height: 715px;
   margin-bottom: 30px;
+  padding-bottom: 150px;
 
   &:nth-child(2n) {
     margin-right: 14px;
@@ -11,12 +11,13 @@
 
   @include phone {
     width: 100%;
-    height: 615px;
+    padding-bottom: 100px;
+
   }
 
   @include desktop {
     width: 440px;
-    height: 615px;
+    padding-bottom: 100px;
 
     &:nth-child(2n) {
       margin-right: 20px;
@@ -26,18 +27,18 @@
 
 .card__whiteBg {
   background: $white;
-  height: 614px;
+  min-height: 614px;
   position: relative;
-  padding: 65px 142px;
+  padding: 65px 142px 300px 142px;
 
   @include phone {
-    padding: 30px 20px;
-    height: 510px;
+    padding: 30px 20px 200px 20px;
+    min-height: 510px;
   }
 
   @include desktop {
-    padding: 30px 60px;
-    height: 514px;
+    padding: 30px 60px 240px 60px;
+    min-height: 514px;
   }
 
   &::after {
@@ -82,8 +83,6 @@
   left: 50%;
   transform: translate(-50%);
   background: $white;
-  overflow: hidden;
-
 
   @include phone {
     width: 300px;
@@ -121,5 +120,7 @@
 
 .card__img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: relative;
 }
